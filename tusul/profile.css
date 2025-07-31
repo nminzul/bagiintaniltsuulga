@@ -8,10 +8,10 @@
 }
 
 :root {
-    --bg-color: #29353c;
-    --second-bg-color: #354047;
+    --bg-color: #0f0529;
+    --second-bg-color: #4a2574;
     --text-color: white;
-    --main-color: #44576d;
+    --main-color: #924dbf;
 }
 
 html {
@@ -58,7 +58,7 @@ body {
 }
 
 span {
-    background: linear-gradient(270deg, #91cfaa 10%, #2a5d8d 100%);
+    background: linear-gradient(270deg, #bc87f5 10%, #ff4291 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -82,7 +82,7 @@ span {
     font-size: 1.8rem;
     padding: 1rem 2rem;
     border-radius: 3rem;
-    background: linear-gradient(270deg, #1c7d56 10%, #005bb1 100%);
+    background: linear-gradient(270deg, #4a0072 10%, #da279b 100%);
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
