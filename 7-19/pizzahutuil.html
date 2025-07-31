@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza Hut - Үйл ажиллагаа</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .menu-item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      background-color: #fff;
+      transition: transform 0.3s ease;
+    }
+    .menu-item img {
+      width: 100%;
+      border-radius: 5px;
+      width: auto;
+      height: 200px;
+    }
+    .menu-item:hover {
+      z-index: 1;
+      transform: scale(1.03);
+    }
+    footer {
+      background: #222;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container">
+      <img src="Pizza_Hut_international_logo_2014.svg" width="50" height="50" alt="Pizza Hut Logo"/>
+      <a class="navbar-brand" href="#">Pizza Hut</a>
+      <div>
+        <a class="nav-link text-white" href="pizzahutinfo.html">Танилцуулга</a>
+        <a class="nav-link text-white" href="pizzahutuil.html">Үйл ажиллагаа</a>
+        <a class="nav-link text-white" href="pizzaadress.html">Холбоо барих</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Манай үйлчилгээ</h2>
+    <ul>
+      <li>Амтлаг пиццаны цэс</li>
+      <li>Хүргэлтийн үйлчилгээ</li>
+      <li>Салбар дэлгүүрүүдээр үйлчлүүлэх боломж</li>
+      <li>Онлайн захиалга</li>
+    </ul>
+
+    <h3 class="mt-5">Цэс</h3>
+    <div class="row mt-3">
+ 
+      <div class="col-md-4">
+        <div class="menu-item">
+          <img src="Screenshot 2025-07-21 121339.png" alt="Pizza">
+          <h5 class="mt-2">Хүчирхэг</h5>
+          <p>Бөөрөнхий мах, Тахианы мах, Зайдас, Халапено соус, Бяслаг</p>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Захиалах
+          </button>
+        </div>
+      </div>
+
+<div class="col-md-4">
+        <div class="menu-item">
+          <img src="Screenshot 2025-07-21 121124.png" alt="Pizza">
+          <h5 class="mt-2">маханд дурлагсад</h5>
+          <p>Бөөрөнхий мах, Тахианы мах, Зайдас, Халапено соус, Бяслаг</p>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Захиалах
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="menu-item">
+          <img src="Screenshot 2025-07-21 120937.png" alt="Pizza">
+          <h5 class="mt-2">Супер Супрем</h5>
+          <p>Бөөрөнхий мах, Тахианы мах, Зайдас, Халапено соус, Бяслаг</p>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Захиалах
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="menu-item">
+          <img src="Screenshot 2025-07-21 164432.png" alt="Pizza">
+          <h5 class="mt-2">Пепперони</h5>
+          <p>Бөөрөнхий мах, Тахианы мах, Зайдас, Халапено соус, Бяслаг</p>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Захиалах
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="menu-item">
+          <img src="Screenshot 2025-07-21 164739.png" alt="Pizza">
+          <h5 class="mt-2">BBQ Тахиа</h5>
+          <p>Бөөрөнхий мах, Тахианы мах, Зайдас, Халапено соус, Бяслаг</p>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Захиалах
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderModalLabel">Захиалга хийх</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Хаах"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Нэр</label>
+              <input type="text" class="form-control" id="name" placeholder="Таны нэр">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Утас</label>
+              <input type="text" class="form-control" id="phone" placeholder="Утасны дугаар">
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Хаяг</label>
+              <textarea class="form-control" id="address" rows="2" placeholder="Хүргэх хаяг"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Тоо ширхэг</label>
+              <input type="number" class="form-control" id="quantity" min="1" value="1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Болих</button>
+          <button type="button" class="btn btn-primary" >Захиалах</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer>© 2025 Yum! III (UK) Ltd. All rights reserved.</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

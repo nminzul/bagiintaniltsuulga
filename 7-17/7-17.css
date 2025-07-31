@@ -1,0 +1,144 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;          
+    background-color: #dfebf6;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.forms-container{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+    max-height: 500px;
+    align-self: center;
+    border-radius: 50px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.title{
+    font-size: 2.2rem;
+    color: #aac7d8
+}
+.input-field{
+    align-items: center;
+    max-width: 380px;
+    width: 90%;
+    height: 50px;
+    background-color: #e6e6e6;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0.4rem;
+}
+.input-field i{
+    text-align: center;
+    line-height: 55px;
+    color:#44576d;
+    font-size: 1.1rem;
+
+}
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color:#29353c;
+
+}
+.input-field input::placeholder{
+    color:#44576d;
+    font-weight: 500;
+}
+.btn{
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #44576d;
+    color: #e6e6e6;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: .5s ;
+}
+.btn:hover{
+    background-color: #818fa0;
+}
+
+.social-text{
+    padding: .7rem 0;
+    font-size: 1rem;
+}
+
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #444;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.signin-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.form-image-wrapper {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.sign-in-form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}

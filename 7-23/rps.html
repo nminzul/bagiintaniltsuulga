@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Хайч Чулуу Даавуу</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        text-align: center;
+        padding: 20px;
+      }
+      h1 {
+        font-size: x-large;
+        font-family: "Times New Roman", Times, serif;
+        margin: 20px 0;
+      }
+      .game-button {
+        padding: 10px;
+        width: 80px;
+        height: 80px;
+        background-color: beige;
+        border-radius: 5px;
+        margin: 10px;
+        font-size: 16px;
+      }
+      .strtbtn {
+        background-color: beige;
+        border-radius: 5px;
+        border-color: beige;
+        width: 80px;
+        height: 35px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .images {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+      }
+      .images img {
+        width: 100px;
+        height: auto;
+      }
+      .scoreboard {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Хайч Чулуу Даавуу</h1>
+
+    <div>
+      <button class="game-button" onclick="selectChoice('haich.png')">Хайч</button>
+      <button class="game-button" onclick="selectChoice('chuluu.png')">Чулуу</button>
+      <button class="game-button" onclick="selectChoice('daavuu.png')">Даавуу</button>
+    </div>
+
+    <button class="strtbtn" onclick="play()">Харах</button>
+
+    <div class="images">
+      <div>
+        <p>Чиний сонголт</p>
+        <img src="" alt="Your Choice" id="yourImage"/>
+      </div>
+      <div>
+        <p>Ком-ын сонголт</p>
+        <img src="" alt="Computer Choice" id="computerImage"/>
+      </div>
+    </div>
+
+    <div class="scoreboard">
+      Чи: <span id="yourScore">0</span>
+      Ком: <span id="computerScore">0</span>
+      Тэнцээ: <span id="draws">0</span>
+    </div>
+
+    <script>
+      const images = ["haich.png", "chuluu.png", "daavuu.png"];
+      let selectedChoice = null;
+      let yourScore = 0;
+      let computerScore = 0;
+      let draws = 0;
+
+      function selectChoice(choice) {
+        selectedChoice = choice;
+        document.getElementById("yourImage").src = choice;
+      }
+
+      function play() {
+        if (!selectedChoice) {
+          alert("Эхлээд сонголтоо хий");
+          return;
+        }
+
+        const computerChoice = images[Math.floor(Math.random() * images.length)];
+        document.getElementById("computerImage").src = computerChoice;
+
+        if (selectedChoice === computerChoice) {
+          draws++;
+        } else if (
+          (selectedChoice === "haich.png" && computerChoice === "daavuu.png") ||
+          (selectedChoice === "chuluu.png" && computerChoice === "haich.png") ||
+          (selectedChoice === "daavuu.png" && computerChoice === "chuluu.png")
+        ) {
+          yourScore++;
+        } else {
+          computerScore++;
+        }
+
+        document.getElementById("yourScore").textContent = yourScore;
+        document.getElementById("computerScore").textContent = computerScore;
+        document.getElementById("draws").textContent = draws;
+
+        selectedChoice = null;
+      }
+
+    </script>
+  </body>
+</html>
